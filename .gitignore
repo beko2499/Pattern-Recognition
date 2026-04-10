@@ -1,0 +1,12 @@
+# PDF lecture files (too large for git)
+*.pdf
+
+# Extracted text files
+*_text.txt
+*_extracted.txt
+
+# Image directories
+_lec3_images/
+
+# Python scripts
+*.py

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Recognition - الفصل الثاني | تمييز الأنماط</title>
+    <meta name="description" content="تطبيق تفاعلي لدراسة مادة تمييز الأنماط - الفصل الثاني">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-icon">🧠</div>
+            <h2>الفصل الثاني</h2>
+            <p class="subtitle">Pattern Recognition</p>
+        </div>
+        <div class="nav-links" id="navLinks"></div>
+        <div class="sidebar-footer">
+            <div class="progress-container">
+                <div class="progress-label">تقدمك في الفصل</div>
+                <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero-section" id="heroSection">
+            <div class="hero-badge">Chapters 2, 4, 5 & 6 — Lectures 2, 4, 5 & 6</div>
+            <h1 class="hero-title">تمييز الأنماط<br><span class="en-title">Pattern Recognition</span></h1>
+            <p class="hero-desc">مقدمة شاملة في تمييز الأنماط: المفاهيم الأساسية، نظرية بايز، التعريفات الأكاديمية، وأمثلة تطبيقية متنوعة</p>
+            <div class="hero-stats">
+                <div class="stat-card"><div class="stat-num">25</div><div class="stat-label">أقسام</div></div>
+                <div class="stat-card"><div class="stat-num">150</div><div class="stat-label">سؤال تدريبي</div></div>
+                <div class="stat-card"><div class="stat-num">67</div><div class="stat-label">بطاقة مراجعة</div></div>
+            </div>
+            <button class="btn-start" onclick="navigateTo('section-1')">🚀 ابدأ المذاكرة</button>
+        </section>
+
+        <!-- Content Sections Container -->
+        <div id="sectionsContainer"></div>
+
+        <!-- Quiz Section -->
+        <section class="content-section" id="quizSection" style="display:none;">
+            <div class="section-header">
+                <span class="section-icon">📝</span>
+                <h2>اختبار شامل - الفصل الثاني</h2>
+            </div>
+            <div id="quizContainer"></div>
+        </section>
+
+        <!-- Flashcards Section -->
+        <section class="content-section" id="flashcardsSection" style="display:none;">
+            <div class="section-header">
+                <span class="section-icon">🎴</span>
+                <h2>بطاقات المراجعة السريعة</h2>
+            </div>
+            <div class="flashcard-controls">
+                <button class="btn-flash" onclick="prevCard()">→ السابق</button>
+                <span id="cardCounter">1 / 20</span>
+                <button class="btn-flash" onclick="nextCard()">التالي ←</button>
+            </div>
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="flashcard-inner" id="flashcardInner">
+                    <div class="flashcard-front" id="flashFront"></div>
+                    <div class="flashcard-back" id="flashBack"></div>
+                </div>
+            </div>
+            <p class="flip-hint">👆 اضغط على البطاقة لقلبها</p>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
